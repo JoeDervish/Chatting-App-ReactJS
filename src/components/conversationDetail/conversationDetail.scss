@@ -1,0 +1,317 @@
+@import '../../app.scss';
+@import '../../theme.scss';
+
+.component-conversation-detail{
+    flex: 1;
+    .conversation-detail-header {
+        @include left-text;
+        padding-left: 32px;
+        height: 74px;
+        background-color: $color-base;
+        color: $color-white;
+        text-transform: capitalize;
+        .right-nav {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            .nav-item {
+                padding: 15px;
+                justify-content: center;
+                .nav-item-image {
+                    width: 30px;
+                }
+            }
+        }
+    }
+    .conversation-creation-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 14px;
+        font-size: 12px;
+        .creation-text {
+            color: $color-text-grey-3;
+            font-weight: bolder;
+            margin-right: 15px;
+        }
+        .creation-date {
+            color: $color-text-grey-4;
+        }
+    }
+    .scrollbar {
+        height: calc(100vh - 168px) !important;
+    }
+    .track-horizontal {
+        display: none;
+    }
+    .track-vertical {
+        width: 7px !important;
+        right: 0;
+        height: 100%;
+        background-color: $color-white;
+    }
+    .thumb-vertical {
+        width: 7px !important;
+        background-color: $color-scroll-thumb;
+        border-radius: 15px;
+    }
+    .conversation-detail-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 32px;
+        padding-top: 0;
+        .conversation-row {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 5px;
+            .conversation-bubble {
+                font-family: "Gotham-Regular";
+                position: relative;
+                background-color: $color-scroll-track;
+                color: $color-text-grey-3;
+                padding: 10px 25px;
+                display: flex;
+                align-items: center;
+                min-width: 400px;
+                min-height: 20px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                font-size: 13px;
+                line-height: 18px;
+                .reminder {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 14px;
+                    .title {
+                        margin-bottom: 10px;
+                        font-weight: bolder;
+                        text-align: left;
+                        text-transform: capitalize;
+                    }
+                    .date {
+                        display: flex;
+                        margin-bottom: 10px;
+                        .text {
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0 10px;
+                        }
+                    }
+                    .content {
+                        display: flex;
+                        margin-bottom: 10px;
+                        .text {
+                            margin: 0 10px;
+                        }
+                    }
+                    .footer {
+                        display: flex;
+                        .button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: $color-white;
+                            color: $color-pink;
+                            border-radius: 8px;
+                            padding: 0 10px;
+                            text-decoration: none;
+                            width: auto;
+                            .text {
+                                margin: 0 20px;
+                            }                       
+                        }
+                        .info {
+                            display: flex;
+                            margin-left: auto;
+                            font-size: 11px;
+                            .text {
+                                display: flex;
+                                flex-direction: column;
+                                .status-date {
+                                    display: flex;
+                                    justify-content: flex-end;
+                                }
+                            }
+                            .icon {
+                                order: 1;
+                                margin-left: 10px;
+                                .icon-image {
+                                    width: 35px;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .case {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    font-size: 14px;
+                    .title {
+                        margin-bottom: 10px;
+                        font-weight: bolder;
+                        text-align: left;
+                        text-transform: capitalize;
+                    }
+                    .date {
+                        display: flex;
+                        margin-bottom: 5px;
+                        .text {
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0 10px;
+                            text-align: left;
+                            .status-date {
+                                font-size: 9px;
+                            }
+                        }
+                    }
+                    .content {
+                        display: flex;
+                        .status, .history {
+                            display: flex;
+                            .text {
+                                margin: 0 10px;
+                            }
+                        }
+                        .status {
+                            .text {
+                                color: $color-red;
+                                font-weight: bolder;
+                            }
+                        }
+                        .history {
+                            margin-left: auto;
+                            font-weight: bolder;
+                        }
+                    }
+                }
+            }
+            &.bubble-right {
+                align-self: flex-end;
+                margin-left: 104px;
+                .conversation-bubble {
+                    margin-right: 40px;
+                    text-align: justify;            
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: -17px;
+                        right: -8px;
+                        width: 20px;
+                        height: 20px;
+                        background-color: #eeeeee;
+                        transform: skew(52deg) rotateX(177deg) rotateY(-44deg);
+                        transform-origin: top right;
+                        border-radius: 55% 0 0 0;
+                        z-index: -1;
+                    }
+                }
+                .convesration-info {
+                    display: flex;
+                    justify-content: flex-end;
+                    .user-image {
+                        margin-left: 10px;
+                    }
+                    .conversation-owner {
+                        margin-right: auto;
+                    }
+                }
+            }
+            &.bubble-left {
+                align-self: flex-start;
+                // flex-flow: row-reverse;
+                .conversation-bubble {    
+                    margin-left: 45px;
+                    text-align: right;
+                    background-color: $color-text-grey-5;           
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: -15px;
+                        left: -38px;
+                        width: 61px;
+                        height: 30px;
+                        background-color: #eeeeee;
+                        transform: skew(64deg) rotateX(100deg) rotateY(-18deg);
+                        transform-origin: top right;
+                        border-radius: 110% 0 0 0;
+                        z-index: -1;
+                    }
+                }
+                .convesration-info {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;                   
+                    .user-image {
+                        margin-right: 10px;
+                    }
+                    .conversation-date {
+                        order: -1;
+                        margin-left: auto;
+                    }
+                }
+            }
+            .convesration-info {
+                font-size: 12px;
+                color: $color-text-grey-4;
+                .conversation-date{
+                    align-self: center;
+                }
+                .user-image {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    align-self: flex-end;
+                }
+                .conversation-owner{
+                    align-self: center;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+    .message-box {
+        display: flex;
+        align-items: center;      
+        width: 100%;
+        height: 50px;
+        background-color: $color-scroll-track;
+        .add-button, .send-button {
+            display: flex;
+            align-items: center;
+        }
+        .add-button {
+            justify-content: center;
+            flex: 1;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: $color-white;
+        }
+        .send-button {
+            flex: 2;
+            justify-content: center;
+        }
+        .message-input {
+            flex: 28;
+            width: 100%;
+            height: 35px;
+            margin-left: 10px;
+            padding: 0 10px;
+            border-radius: 10px;
+            border: 0;
+            -webkit-transition: outline 0.3s;
+            -moz-transition: outline 0.3s;
+            -o-transition: outline 0.3s;
+            transition: outline 0.3s;
+            &:focus {               
+                outline: none;
+            }
+        }
+    }
+}

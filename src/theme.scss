@@ -1,0 +1,48 @@
+$color-white: #fff;
+$color-white-30: rgba(255, 255, 255, 0.3);
+$color-white-20: rgba(255, 255, 255, 0.2);
+$color-white-grey: #ededed;
+$color-scroll-track: #eeeeee;
+$color-scroll-thumb: #c5d2d4;
+$color-pale-grey: #dfe3e4;
+$color-pale-grey-2: #eef2f3;
+$color-text-grey: #6d6d6d;
+$color-text-grey-2: #c0c6c6;
+$color-text-grey-3: #546566;
+$color-text-grey-4: rgba(110, 110, 110, 0.4);
+$color-text-grey-5: #ecf2f2;
+$color-black: #000;
+
+$color-pink: #e88282;
+$color-red: #ce5b4c;
+
+$color-base: #48b1b8;
+$color-base-2: #5e8a8b;
+
+@font-face {
+    font-family: 'Gotham-Ultra';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Roboto'), url('./fonts/Gotham-Ultra.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Roboto'), url('./fonts/Gotham-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gotham-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Roboto'), url('./fonts/Gotham-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gotham-Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Roboto'), url('./fonts/Gotham-Thin.ttf') format('truetype');
+}

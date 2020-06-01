@@ -1,0 +1,40 @@
+@import '../../app.scss';
+@import '../../theme.scss';
+
+.component-sidebar{
+    width: 80px;
+    height: 100vh;
+    background-color: $color-base;
+    .logo-img {
+        width: 100%;
+    }
+    .sidebar-item-list {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        height: calc(100% - 96px);
+        .sidebar-item {
+            @include center-text;
+            width: 80px;
+            height: 80px;
+            list-style: none;
+            -webkit-transition: background-color 0.3s;
+            -moz-transition: background-color 0.3s;
+            -o-transition: background-color 0.3s;
+            transition: background-color 0.3s;
+            &.active {
+                background-color: $color-white-30;
+                &:hover {
+                    background-color: $color-white-30;
+                }
+            }
+            &:hover {
+                background-color: $color-white-20;
+            }
+            &:last-of-type {
+                margin-top: auto;
+            }
+        }
+    }
+}

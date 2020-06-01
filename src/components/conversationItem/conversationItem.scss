@@ -1,0 +1,82 @@
+@import '../../app.scss';
+@import '../../theme.scss';
+
+.component-conversation-item{
+    width: 374px;
+    border-bottom: 2px solid $color-pale-grey;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    &:first-child {
+        background-color: $color-pale-grey-2;   
+        .conversation-item {
+            .conversation-title ,.conversation-user {
+                font-weight: bolder;
+            }
+        }
+    }
+    &:hover {
+        background-color: $color-pale-grey-2;
+    }
+    .conversation-item {
+        text-decoration: none;
+        display: flex;
+        padding: 22px 24px;
+        .conversation-image {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            &.unread {
+                border: 4px solid $color-base-2;
+            }
+        } 
+        .conversation-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            padding-left: 15px;
+            .conversation-title ,.conversation-user, .conversation-content {
+                color: $color-text-grey;
+                text-transform: capitalize;
+                margin-bottom: 2px;
+            }
+            .conversation-title, .conversation-user {
+                &.unread {
+                    font-weight: bolder;
+                }
+            }
+            .conversation-user, .conversation-content {
+                font-size: 14px;
+            }
+        }
+        .conversation-info {
+            margin-left: auto;
+            color: $color-text-grey;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .conversation-date {
+                color: $color-text-grey-2;
+                font-size: 12px;
+            }
+            .conversation-counter {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 35px;
+                height: 20px;
+                background-color: $color-base-2;
+                border-radius: 15px;
+                color: $color-white;
+                font-size: 12px;
+                margin-left: auto;
+                margin-top: 15px;
+                &.read {
+                    display: none;
+                }
+            }
+        }
+    }
+}

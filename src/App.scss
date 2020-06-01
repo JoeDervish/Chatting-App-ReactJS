@@ -1,0 +1,43 @@
+@import './theme.scss';
+
+body {
+  font-family: 'Gotham-Medium';
+}
+.App {
+  font-family: 'Gotham-Medium';
+  text-align: center;
+  display: flex;
+}
+@mixin center-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin left-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+@mixin right-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+button {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+  &:focus {
+    outline: 0;
+  }
+}
+::-webkit-input-placeholder {
+  color: $color-scroll-thumb;
+  font-size: 16px;
+}
+::placeholder {
+  color: $color-scroll-thumb;
+  font-size: 16px;
+}
